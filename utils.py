@@ -9,8 +9,8 @@ def check_victory(board, coords, val):
         y_coords = []
         for shift in shift_ranges:
             x,y = coords + shift*bv
-            if (x >= 0 and x <= 31 and 
-               y >= 0 and y <= 31):
+            if (x >= 0 and x <= 30 and 
+               y >= 0 and y <= 30):
                 x_coords.append(x)
                 y_coords.append(y)
         vict, ends = check_vector(board[x_coords, y_coords], val)

@@ -57,6 +57,7 @@ class GameHost():
                     x, y = self.p1.get_action(self.env.board, self.info_dict)
                 else:
                     x, y = self.p2.get_action(self.env.board, self.info_dict)
+                print(x, y, self.info_dict)
                 self.turn(x,y)
         
 
@@ -69,10 +70,10 @@ class GameHost():
         self.fp_turn = not self.fp_turn
 
     def update_info(self, x, y):
-        self.info_dict['up'] = max(0, x-3)
-        self.info_dict['down'] = min(31, x+3)
-        self.info_dict['up'] = max(0, y-3)
-        self.info_dict['down'] = min(31, y+3)
+        self.info_dict['up'] = min(self.info_dict['up'],max(0, x-3))
+        self.info_dict['down'] = max(self.info_dict['down'] , min(30, x+3))
+        self.info_dict['left'] = min(max(0, y-3), self.info_dict['left'])
+        self.info_dict['right'] = max(self.info_dict['right'], min(30, y+3))
 
 class HumanPlayer():
 
