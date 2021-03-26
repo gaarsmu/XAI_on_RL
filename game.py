@@ -3,36 +3,42 @@ from utils import *
 from env import TicTacToeEnv
 import tkinter as tk
 from time import sleep
+from calcbot import CalcBot
+
 
 def mouseClick(event):
     global host
     if not env.freeze and not host.freeze and not host.game_over:
-        
-        x, y = int(event.x)// 25, int(event.y)// 25
+
+        x, y = int(event.x) // 25, int(event.y) // 25
         if 0 <= x <= 30 and 0 <= y <= 30:
             #print('clicked on ', x, ' ', y)
-            host.freeze = True
-            host.turn(x,y)
-            
+            if host.game_type == 'hc':
+                host.freeze = True
+            host.turn(x, y)
+
             if host.game_type == 'hc' and not host.game_over:
                 x, y = host.p2.get_action(host.env.board, host.info_dict)
-                host.turn(x,y)
+                host.turn(x, y)
                 host.freeze = False
         else:
             pass
     else:
         pass
 
+
 class GameHost():
 
-    def __init__(self, p1, p2, env):
+    def __init__(self, p1, p2, env, view_range = 1):
         self.fp_turn = False
         self.p1 = p1
         self.p2 = p2
         self.freeze = True
         self.game_over = False
         self.env = env
-        self.info_dict = {'up' : 12, 'down' : 18, 'left' : 12, 'right' : 18}
+        self.view_range = view_range
+        self.info_dict = {'up': 15-self.view_range, 'down': 15 + self.view_range,
+                         'left': 15-self.view_range, 'right': 15 + self.view_range}  
 
     def start_game(self):
         #self.game_in_progress = True
@@ -48,32 +54,32 @@ class GameHost():
         if self.game_type == 'hh':
             self.freeze = False
         elif self.game_type == 'hc':
-            x,y = self.p2.get_action(host.env.board, host.info_dict)
-            self.turn(x,y)
+            x, y = self.p2.get_action(host.env.board, host.info_dict)
+            self.turn(x, y)
             self.freeze = False
         elif self.game_type == 'cc':
             while not self.game_over:
                 if self.fp_turn:
                     x, y = self.p1.get_action(self.env.board, self.info_dict)
                 else:
-                    x, y = self.p2.get_action(self.env.board, self.info_dict)
-                print(x, y, self.info_dict)
-                self.turn(x,y)
-        
+                    x, y = self.p2.get_action(-1*self.env.board, self.info_dict)
+                
+                self.turn(x, y)
 
     def turn(self, x, y):
-        board, reward, done, info = env.step((x , y ))
+        board, reward, done, info = self.env.step((x, y))
         self.update_info(x, y)
-        self.board = board
+        #self.board = board
         if done:
             self.game_over = True
         self.fp_turn = not self.fp_turn
 
     def update_info(self, x, y):
-        self.info_dict['up'] = min(self.info_dict['up'],max(0, x-3))
-        self.info_dict['down'] = max(self.info_dict['down'] , min(30, x+3))
-        self.info_dict['left'] = min(max(0, y-3), self.info_dict['left'])
-        self.info_dict['right'] = max(self.info_dict['right'], min(30, y+3))
+        self.info_dict['up'] = min(self.info_dict['up'], max(0, x-self.view_range))
+        self.info_dict['down'] = max(self.info_dict['down'], min(30, x+self.view_range))
+        self.info_dict['left'] = min(max(0, y-self.view_range), self.info_dict['left'])
+        self.info_dict['right'] = max(self.info_dict['right'], min(30, y+self.view_range))
+
 
 class HumanPlayer():
 
@@ -83,23 +89,26 @@ class HumanPlayer():
     def get_action(self):
         pass
 
+
 class RandomBot():
 
     def __init__(self):
         self.type = 'computer'
 
     def get_action(self, board, info):
-        board_slice  = board[info['up']:info['down'], info['left']: info['right']]
-        choices = np.transpose(np.nonzero(board_slice==0))
+        board_slice = board[info['up']:info['down']+1,
+                            info['left']: info['right']+1]
+        choices = np.transpose(np.nonzero(board_slice == 0))
         choice = np.random.choice(choices.shape[0], size=1)
         out = choices[choice[0], :]
         return out[0]+info['up'], out[1]+info['left']
 
-if __name__== '__main__':
+
+if __name__ == '__main__':
     env = TicTacToeEnv(render=True)
 
-    player1 = RandomBot()
-    player2 = RandomBot()
+    player1 = HumanPlayer()#CalcBot(2, 1)#
+    player2 = CalcBot(2, 1)#HumanPlayer()#
 
     host = GameHost(player1, player2, env)
     host.start_game()
