@@ -11,7 +11,7 @@ def mouseClick(event):
     if not env.freeze and not host.freeze and not host.game_over:
 
         x, y = int(event.x) // 25, int(event.y) // 25
-        if 0 <= x <= 30 and 0 <= y <= 30:
+        if 0 <= x <= env.size-1 and 0 <= y <= env.size-1:
             #print('clicked on ', x, ' ', y)
             if host.game_type == 'hc':
                 host.freeze = True
@@ -36,9 +36,12 @@ class GameHost():
         self.freeze = True
         self.game_over = False
         self.env = env
+        self.env_size = self.env.size
         self.view_range = view_range
-        self.info_dict = {'up': 15-self.view_range, 'down': 15 + self.view_range,
-                         'left': 15-self.view_range, 'right': 15 + self.view_range}  
+        self.info_dict = {'up': self.env_size//2-self.view_range,
+                         'down': self.env_size//2 + self.view_range,
+                         'left': self.env_size//2-self.view_range,
+                         'right': self.env_size//2 + self.view_range}  
 
     def start_game(self):
         #self.game_in_progress = True
@@ -76,9 +79,9 @@ class GameHost():
 
     def update_info(self, x, y):
         self.info_dict['up'] = min(self.info_dict['up'], max(0, x-self.view_range))
-        self.info_dict['down'] = max(self.info_dict['down'], min(30, x+self.view_range))
+        self.info_dict['down'] = max(self.info_dict['down'], min(self.env_size-1, x+self.view_range))
         self.info_dict['left'] = min(max(0, y-self.view_range), self.info_dict['left'])
-        self.info_dict['right'] = max(self.info_dict['right'], min(30, y+self.view_range))
+        self.info_dict['right'] = max(self.info_dict['right'], min(self.env_size-1, y+self.view_range))
 
 
 class HumanPlayer():

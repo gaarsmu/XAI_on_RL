@@ -4,10 +4,11 @@ import time
 
 class CalcBot():
 
-    def __init__(self, depth, view_range=3):
+    def __init__(self, depth, view_range=3, env_size=19):
         self.type = 'computer'
         self.depth = depth
         self.view_range = view_range
+        self.env_size = env_size
 
     def get_action(self, board, info):
         move_scores = self.evaluate(board, info, self.depth, flip = 1)
@@ -47,9 +48,9 @@ class CalcBot():
     def get_loc_info(self, info_dict, x, y):
         info_dict_loc = {}
         info_dict_loc['up'] = min(info_dict['up'], max(0, x-self.view_range))
-        info_dict_loc['down'] = max(info_dict['down'], min(30, x+self.view_range))
+        info_dict_loc['down'] = max(info_dict['down'], min(self.env_size-1, x+self.view_range))
         info_dict_loc['left'] = min(info_dict['left'], max(0, y-self.view_range))
-        info_dict_loc['right'] = max(info_dict['right'], min(30, y+self.view_range))
+        info_dict_loc['right'] = max(info_dict['right'], min(self.env_size-1, y+self.view_range))
         return info_dict_loc
 
         #board_slice = board[info['up']:info['down'],

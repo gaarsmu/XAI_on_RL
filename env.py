@@ -4,29 +4,30 @@ import tkinter as tk
 
 class TicTacToeEnv():
 
-    def __init__(self, render = False):
-        self.board = np.zeros((31,31), dtype=np.int16)
+    def __init__(self, render = False, size = 19):
+        self.size = size
+        self.board = np.zeros((size,size), dtype=np.int16)
 
         self.done = False
         self.freeze = False
         self.render = render
         if self.render:
             self.window = tk.Tk()
-            self.canv = tk.Canvas(self.window, width=775, height=775)
+            self.canv = tk.Canvas(self.window, width=self.size*25, height=self.size*25)
             self.canv.grid(row=1, column=0, columnspan=2)
             
             
-            for i in range(0, 31, ):
-                for j in range(0, 31):
+            for i in range(self.size):
+                for j in range(self.size):
                     self.canv.create_rectangle(i*25, j*25,
                                  (i+1)*25, (j+1)* 25,
                                   tag="rect",
                                   fill="lightgray", outline="black")
             self.window.update()
         self.fpt = True
-        self.board[15,15] = 1
+        self.board[self.size//2,self.size//2] = 1
         if self.render:
-            self.putfig(15,15)
+            self.putfig(self.size//2,self.size//2)
             self.window.update()
         self.fpt = False #first player turn
             
