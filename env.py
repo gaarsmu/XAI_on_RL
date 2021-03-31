@@ -22,19 +22,21 @@ class TicTacToeEnv():
                     self.canv.create_rectangle(i*25, j*25,
                                  (i+1)*25, (j+1)* 25,
                                   tag="rect",
-                                  fill="lightgray", outline="black")
+                                  fill="burlywood", outline="black")
             self.window.update()
         self.fpt = True
         self.board[self.size//2,self.size//2] = 1
         if self.render:
             self.putfig(self.size//2,self.size//2)
             self.window.update()
+        self.turns_count = 1
         self.fpt = False #first player turn
             
     
     def step(self, action):
         x,y = action
-        
+        self.turns_count += 1
+        #repeated move case
         if self.board[x,y] != 0:
             self.done = True
             self.freeze = True
@@ -54,11 +56,22 @@ class TicTacToeEnv():
         if done and self.render:
             self.canv.create_line(positions[0] * 25 + 13, positions[1] * 25 + 13,
                          positions[2] * 25 + 13, positions[3] * 25 + 13,
-                         width=2, fill='blue')
+                         width=4, fill='red')
             self.window.update()
+        reward = 1 if self.done else 0
+
+        #Game won case
         if done:
             self.freeze = True
-        reward = 1 if self.done else 0
+            
+            return self.board, reward, self.done, None
+        
+        #Full board_case
+        if self.turns_count == self.size*self.size:
+            self.freeze = True
+            done = True
+            self.done = done
+
         return self.board, reward, self.done, None
 
 
@@ -70,11 +83,11 @@ class TicTacToeEnv():
         if self.fpt:
             self.canv.create_oval(x * 25 + 1, y * 25 + 1,
                             x * 25 + 24, y * 25 + 24,
-                            width=2, outline='black')
+                            width=2, outline='black', fill='black')
         else:
             self.canv.create_oval(x * 25 + 1, y * 25 + 1,
                             x * 25 + 24, y * 25 + 24,
-                            width=2, outline='red')
+                            width=2, outline='white', fill='white')
         self.window.update()
 
 

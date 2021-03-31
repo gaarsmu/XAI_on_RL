@@ -9,8 +9,8 @@ def check_victory(board, coords, val):
         y_coords = []
         for shift in shift_ranges:
             x,y = coords + shift*bv
-            if (x >= 0 and x <= 30 and 
-               y >= 0 and y <= 30):
+            if (x >= 0 and x < board.shape[0] and 
+               y >= 0 and y < board.shape[0]):
                 x_coords.append(x)
                 y_coords.append(y)
         vict, ends = check_vector(board[x_coords, y_coords], val)
@@ -22,6 +22,8 @@ def check_victory(board, coords, val):
 
 
 def check_vector(vector, val):
+    if (vector==val).sum()<5:
+        return False, (None, None)
     count  = 0
     start = -1
     for i in range(vector.shape[0]):

@@ -52,9 +52,3 @@ class CalcBot():
         info_dict_loc['left'] = min(info_dict['left'], max(0, y-self.view_range))
         info_dict_loc['right'] = max(info_dict['right'], min(self.env_size-1, y+self.view_range))
         return info_dict_loc
-
-        #board_slice = board[info['up']:info['down'],
-        #                    info['left']: info['right']]
-        #choices = np.transpose(np.nonzero(board_slice == 0))
-        #choice = np.random.choice(choices.shape[0], size=1)
-        #out = choices[choice[0], :]

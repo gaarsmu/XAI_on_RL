@@ -4,6 +4,7 @@ from env import TicTacToeEnv
 import tkinter as tk
 from time import sleep
 from calcbot import CalcBot
+from DQN_bot import DQN_bot
 
 
 def mouseClick(event):
@@ -71,6 +72,7 @@ class GameHost():
 
     def turn(self, x, y):
         board, reward, done, info = self.env.step((x, y))
+        print(reward, done)
         self.update_info(x, y)
         #self.board = board
         if done:
@@ -111,7 +113,7 @@ if __name__ == '__main__':
     env = TicTacToeEnv(render=True)
 
     player1 = HumanPlayer()#CalcBot(2, 1)#
-    player2 = CalcBot(2, 1)#HumanPlayer()#
+    player2 = HumanPlayer()#DQN_bot(epsilon=1.)#CalcBot(3, 2)
 
     host = GameHost(player1, player2, env)
     host.start_game()
