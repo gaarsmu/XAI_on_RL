@@ -20,9 +20,11 @@ class DQNNet(nn.Module):
         self.depth = depth
         self.first_conv = ConvBlock(1,64)
 
-        self.conv_blocks = {}
+        conv_blocks = []
         for i in range(2,self.depth+1):
-            self.conv_blocks[i] = ConvBlock(64,64)
+            conv_blocks.append(ConvBlock(64,64))
+        self.conv_blocks = nn.Sequential(*conv_blocks)
+
 
         self.head_con = nn.Conv2d(64,2,1,1,0)
         self.head_norm = nn.BatchNorm2d(2)
@@ -31,8 +33,7 @@ class DQNNet(nn.Module):
 
     def forward(self, x):
         x = self.first_conv(x)
-        for i in range(2,self.depth+1):
-            x = self.conv_blocks[i](x)
+        x = self.conv_blocks(x)
         x = self.head_con(x)
         x = self.head_norm(x)
         x = self.head_relu(x)

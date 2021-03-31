@@ -3,12 +3,27 @@ from DQN_net import DQNNet
 import numpy as np
 
 class DQN_bot():
-    def __init__(self, epsilon = 0, depth = 11, save_path=None):
+
+    def __init__(self, net=None, epsilon = 0, depth = 11, save_path=None,
+                device = 'cpu'):
         self.type = 'computer'
-        self.net = DQNNet(depth)
         self.epsilon = epsilon
-        if save_path is not None:
-            self.net.load_state_dict(torch.load(save_path))
+        self.device = device
+        if net is not None:
+            self.net = net 
+        else:
+            self.net = DQNNet(depth)
+            if save_path is not None:
+                self.net.load_state_dict(torch.load(save_path))
+            self.net.to(self.device)
+
+    def evaluate_board(self,board):
+        inpt = torch.from_numpy(board).to(torch.float)        
+        inpt = inpt.reshape(1,1,19,19)
+        inpt = inpt.to(self.device)
+        values = self.net(inpt)
+        return values
+
     
     def get_action(self, board, info):
         if np.random.uniform() < self.epsilon:
@@ -17,8 +32,6 @@ class DQN_bot():
             out = choices[choice[0], :]
             return out[0], out[1]         
         else:
-            inpt = torch.from_numpy(board).to(torch.float)        
-            inpt = inpt.reshape(1,1,19,19)
-            values = self.net(inpt)
+            values = self.evaluate_board(board)
             choice = torch.argmax(values).item()
             return choice//19, choice % 19

@@ -58,8 +58,8 @@ class GameHost():
         if self.game_type == 'hh':
             self.freeze = False
         elif self.game_type == 'hc':
-            x, y = self.p2.get_action(host.env.board, host.info_dict)
-            self.turn(x, y)
+            #x, y = self.p2.get_action(host.env.board, host.info_dict)
+            #self.turn(x, y)
             self.freeze = False
         elif self.game_type == 'cc':
             while not self.game_over:
@@ -72,7 +72,6 @@ class GameHost():
 
     def turn(self, x, y):
         board, reward, done, info = self.env.step((x, y))
-        print(reward, done)
         self.update_info(x, y)
         #self.board = board
         if done:
@@ -113,8 +112,7 @@ if __name__ == '__main__':
     env = TicTacToeEnv(render=True)
 
     player1 = HumanPlayer()#CalcBot(2, 1)#
-    player2 = HumanPlayer()#DQN_bot(epsilon=1.)#CalcBot(3, 2)
-
+    player2 = DQN_bot(device='cuda:0', save_path='DQN_net.pth')#HumanPlayer()#CalcBot(3, 2)
     host = GameHost(player1, player2, env)
     host.start_game()
     env.window.mainloop()

@@ -25,12 +25,13 @@ class TicTacToeEnv():
                                   fill="burlywood", outline="black")
             self.window.update()
         self.fpt = True
-        self.board[self.size//2,self.size//2] = 1
-        if self.render:
-            self.putfig(self.size//2,self.size//2)
-            self.window.update()
-        self.turns_count = 1
-        self.fpt = False #first player turn
+        self.turns_count = 0
+        #self.board[self.size//2,self.size//2] = 1
+        #if self.render:
+        #    self.putfig(self.size//2,self.size//2)
+        #    self.window.update()
+        #self.turns_count = 1
+        #self.fpt = False #first player turn
             
     
     def step(self, action):
