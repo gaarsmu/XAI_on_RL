@@ -55,7 +55,7 @@ def form_tensors(batch, batch_size):
         masks.extend((mask, mask, mask, mask))
         next_boards.extend([next_board, np.flip(next_board, 0),
          np.flip(next_board, 1), np.flip(next_board, (0,1))])
-    
+
     boards = np.array(boards).reshape(batch_size*4,1,19,19)
     rewards = np.array(rewards).reshape(batch_size*4)
     masks = np.array(masks).reshape(batch_size*4)
@@ -68,41 +68,46 @@ def form_tensors(batch, batch_size):
 
     output = main_net(boards)
     target = torch.clone(output)
-
     next_values = main_net(next_boards)
     target[range(batch_size*4), actions] = rewards + gamma*masks*(-1*torch.max(next_values, dim=1)[0])
     target = target.detach()
+    print('Target cell out: ', output[-1][actions[-1]].item(), 'Target cell target: ',target[-1][actions[-1]].item())
+    print('Non-target cell out: ', output[-1][actions[-1]-1].item(), 'Non-target cell target: ',target[-1][actions[-1]-1].item())
     return output, target
 
 def net_update():
     optimizer.zero_grad()
     batch_size = min(len(memory), BATCH_SIZE-len(memory_lm))
     batch = random.sample(memory, batch_size) + list(memory_lm)
-    print(len(batch))
-    
+    batch_size = batch_size + len(memory_lm)
+    print(batch_size)
     output, target = form_tensors(batch, batch_size)
     loss = loss_f(output, target)
     loss.backward()
     optimizer.step()
+    print('Loss: ', loss.item())
     optimizer.zero_grad()
     output, _ = form_tensors(batch, batch_size)
     loss = loss_f(output, target)
     loss.backward()
-    optimizer.step()    
+    optimizer.step()
+    print('Loss: ', loss.item())
+    output, _ = form_tensors(batch, batch_size)
+    optimizer.zero_grad()
 
 if __name__ == '__main__':
     main_net = DQNNet(11)
-    #main_net.load_state_dict(torch.load('models/DQN_net_200k.pth'))
+    main_net.load_state_dict(torch.load('models/DQN_net_200k.pth'))
     device = 'cuda:0' if torch.cuda.is_available() else 'cpu'
     main_net.to(device)
     memory = deque(maxlen=5000)
     memory_lm = deque(maxlen=8)
-    n_epochs = 1
-    BATCH_SIZE = 32
+    n_epochs = 100
+    BATCH_SIZE = 8
     loss_f = nn.MSELoss()
-    optimizer = torch.optim.Adam(main_net.parameters(), lr=0.001)
+    optimizer = torch.optim.SGD(main_net.parameters(), lr=0.003)
     gamma = 0.95
-    epsilons = [0.8,1.0,1.0,1.0]
+    epsilons = [0]*4 #[0.8,1.0,1.0,1.0]
     start = time.time()
 
     for i in range(1, n_epochs+1):
@@ -111,7 +116,7 @@ if __name__ == '__main__':
         memory.extend(traj)
         memory_lm.extend(traj[-1:])
         net_update()
-
+        print('---------------------------------------------------------------------')
         if i % 100 == 0:
             torch.save(main_net.state_dict(), 'DQN_net.pth')
             print('Saving the model after {} episodes'.format(i))
@@ -120,7 +125,7 @@ if __name__ == '__main__':
             epsilons[1] = max(epsilons[1]*0.999, 0.1)
             epsilons[2] = max(epsilons[2]*0.999, 0.25)
             epsilons[3] = max(epsilons[3]*0.999, 0.5)
-        #print('Episode: ', i, ', trajectory length: ', len(traj))
+        print('Episode: ', i, ', trajectory length: ', len(traj))
     finish = time.time()
     print(finish-start)
     

@@ -1,0 +1,1102 @@
+3
+Target cell out:  -0.14998140931129456 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0014132949290797114
+Target cell out:  -0.14998336136341095 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0014132899232208729
+Target cell out:  -0.14998531341552734 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  1 , trajectory length:  2
+6
+Target cell out:  -0.14998531341552734 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.00141328654717654
+Target cell out:  -0.14998726546764374 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0014132815413177013
+Target cell out:  -0.14998921751976013 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  2 , trajectory length:  2
+8
+Target cell out:  -0.14998921751976013 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0013397586299106479
+Target cell out:  -0.149990975856781 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0013397546717897058
+Target cell out:  -0.14999273419380188 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  3 , trajectory length:  2
+8
+Target cell out:  -0.14999273419380188 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0017808638513088226
+Target cell out:  -0.14999566972255707 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.00178085220977664
+Target cell out:  -0.14999860525131226 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  4 , trajectory length:  2
+8
+Target cell out:  -0.14999860525131226 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0013397422153502703
+Target cell out:  -0.15000036358833313 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0013397382572293282
+Target cell out:  -0.150002121925354 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  5 , trajectory length:  2
+8
+Target cell out:  -0.150002121925354 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.001780828693881631
+Target cell out:  -0.1500050574541092 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0017808172851800919
+Target cell out:  -0.15000799298286438 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  6 , trajectory length:  2
+8
+Target cell out:  -0.15000799298286438 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001347253099084
+Target cell out:  -0.15001152455806732 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001330489292741
+Target cell out:  -0.15001505613327026 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  7 , trajectory length:  3
+8
+Target cell out:  -0.15001505613327026 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020013139583170414
+Target cell out:  -0.1500185877084732 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020012976601719856
+Target cell out:  -0.15002211928367615 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  8 , trajectory length:  3
+8
+Target cell out:  -0.15002211928367615 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001280663534999
+Target cell out:  -0.1500256508588791 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020012641325592995
+Target cell out:  -0.15002918243408203 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  9 , trajectory length:  2
+8
+Target cell out:  -0.15002918243408203 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020012476015836
+Target cell out:  -0.15003271400928497 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020012310706079006
+Target cell out:  -0.15003624558448792 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  10 , trajectory length:  3
+8
+Target cell out:  -0.15003624558448792 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001214539632201
+Target cell out:  -0.15003977715969086 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020011975429952145
+Target cell out:  -0.1500433087348938 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  11 , trajectory length:  2
+8
+Target cell out:  -0.1500433087348938 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020011807791888714
+Target cell out:  -0.15004684031009674 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020011644810438156
+Target cell out:  -0.15005037188529968 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  12 , trajectory length:  2
+8
+Target cell out:  -0.15005037188529968 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020011477172374725
+Target cell out:  -0.15005390346050262 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001131186261773
+Target cell out:  -0.15005743503570557 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  13 , trajectory length:  2
+8
+Target cell out:  -0.15005743503570557 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.00200111442245543
+Target cell out:  -0.1500609666109085 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020010978914797306
+Target cell out:  -0.15006449818611145 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  14 , trajectory length:  2
+8
+Target cell out:  -0.15006449818611145 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001081360504031
+Target cell out:  -0.1500680297613144 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001064596697688
+Target cell out:  -0.15007156133651733 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  15 , trajectory length:  4
+8
+Target cell out:  -0.15007156133651733 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020010480657219887
+Target cell out:  -0.15007509291172028 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020010313019156456
+Target cell out:  -0.15007862448692322 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  16 , trajectory length:  2
+8
+Target cell out:  -0.15007862448692322 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002001014305278659
+Target cell out:  -0.15008215606212616 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000998007133603
+Target cell out:  -0.1500856876373291 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  17 , trajectory length:  3
+8
+Target cell out:  -0.1500856876373291 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020009814761579037
+Target cell out:  -0.15008921921253204 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020009649451822042
+Target cell out:  -0.15009275078773499 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  18 , trajectory length:  2
+8
+Target cell out:  -0.15009275078773499 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000948414206505
+Target cell out:  -0.15009628236293793 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000931417569518
+Target cell out:  -0.15009981393814087 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  19 , trajectory length:  6
+8
+Target cell out:  -0.15009981393814087 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020009148865938187
+Target cell out:  -0.1501033455133438 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000898588448763
+Target cell out:  -0.15010687708854675 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  20 , trajectory length:  2
+8
+Target cell out:  -0.15010687708854675 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000881591811776
+Target cell out:  -0.1501104086637497 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020008650608360767
+Target cell out:  -0.15011394023895264 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  21 , trajectory length:  2
+8
+Target cell out:  -0.15011394023895264 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020008485298603773
+Target cell out:  -0.15011747181415558 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000831998884678
+Target cell out:  -0.15012100338935852 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  22 , trajectory length:  4
+8
+Target cell out:  -0.15012100338935852 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000815235078335
+Target cell out:  -0.15012453496456146 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020007987041026354
+Target cell out:  -0.1501280665397644 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  23 , trajectory length:  2
+8
+Target cell out:  -0.1501280665397644 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020007819402962923
+Target cell out:  -0.15013159811496735 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000765409320593
+Target cell out:  -0.1501351296901703 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  24 , trajectory length:  2
+8
+Target cell out:  -0.1501351296901703 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.00200074864551425
+Target cell out:  -0.15013866126537323 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020007321145385504
+Target cell out:  -0.15014219284057617 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  25 , trajectory length:  2
+8
+Target cell out:  -0.15014219284057617 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020007153507322073
+Target cell out:  -0.1501457244157791 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000698819756508
+Target cell out:  -0.15014925599098206 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  26 , trajectory length:  5
+8
+Target cell out:  -0.15014925599098206 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020006822887808084
+Target cell out:  -0.150152787566185 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020006655249744654
+Target cell out:  -0.15015631914138794 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  27 , trajectory length:  3
+8
+Target cell out:  -0.15015631914138794 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000648993998766
+Target cell out:  -0.15015985071659088 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000632230192423
+Target cell out:  -0.15016338229179382 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  28 , trajectory length:  2
+8
+Target cell out:  -0.15016338229179382 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.00200061546638608
+Target cell out:  -0.15016691386699677 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020005989354103804
+Target cell out:  -0.1501704454421997 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  29 , trajectory length:  2
+8
+Target cell out:  -0.1501704454421997 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000582404434681
+Target cell out:  -0.15017397701740265 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020005658734589815
+Target cell out:  -0.1501775085926056 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  30 , trajectory length:  2
+8
+Target cell out:  -0.1501775085926056 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000549342483282
+Target cell out:  -0.15018104016780853 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020005323458462954
+Target cell out:  -0.15018457174301147 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  31 , trajectory length:  3
+8
+Target cell out:  -0.15018457174301147 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000515814870596
+Target cell out:  -0.15018810331821442 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020004992838948965
+Target cell out:  -0.15019163489341736 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  32 , trajectory length:  2
+8
+Target cell out:  -0.15019163489341736 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020004825200885534
+Target cell out:  -0.1501951664686203 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000465989112854
+Target cell out:  -0.15019869804382324 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  33 , trajectory length:  2
+8
+Target cell out:  -0.15019869804382324 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020004494581371546
+Target cell out:  -0.15020222961902618 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000432927161455
+Target cell out:  -0.15020576119422913 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  34 , trajectory length:  2
+8
+Target cell out:  -0.15020576119422913 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020004163961857557
+Target cell out:  -0.15020929276943207 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020003996323794127
+Target cell out:  -0.150212824344635 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  35 , trajectory length:  3
+8
+Target cell out:  -0.150212824344635 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020003828685730696
+Target cell out:  -0.15021635591983795 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.00200036633759737
+Target cell out:  -0.1502198874950409 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  36 , trajectory length:  2
+8
+Target cell out:  -0.1502198874950409 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000349573791027
+Target cell out:  -0.15022341907024384 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000332809984684
+Target cell out:  -0.15022695064544678 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  37 , trajectory length:  2
+8
+Target cell out:  -0.15022695064544678 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020003165118396282
+Target cell out:  -0.15023048222064972 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000299748033285
+Target cell out:  -0.15023401379585266 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  38 , trajectory length:  2
+8
+Target cell out:  -0.15023401379585266 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020002832170575857
+Target cell out:  -0.1502375453710556 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020002664532512426
+Target cell out:  -0.15024107694625854 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  39 , trajectory length:  4
+8
+Target cell out:  -0.15024107694625854 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000249922275543
+Target cell out:  -0.1502446085214615 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020002331584692
+Target cell out:  -0.15024814009666443 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  40 , trajectory length:  2
+8
+Target cell out:  -0.15024814009666443 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000216394662857
+Target cell out:  -0.15025167167186737 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020001998636871576
+Target cell out:  -0.1502552032470703 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  41 , trajectory length:  2
+8
+Target cell out:  -0.1502552032470703 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002000183332711458
+Target cell out:  -0.15025873482227325 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020001670345664024
+Target cell out:  -0.1502622663974762 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  42 , trajectory length:  3
+8
+Target cell out:  -0.1502622663974762 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020001502707600594
+Target cell out:  -0.15026579797267914 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0020001332741230726
+Target cell out:  -0.15026932954788208 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+---------------------------------------------------------------------
+Episode:  43 , trajectory length:  8
+8
+Target cell out:  -0.15026932954788208 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.002179456176236272
+Target cell out:  -0.15027286112308502 Target cell target:  -1.0
+Non-target cell out:  -0.1794094294309616 Non-target cell target:  -0.1794094294309616
+Loss:  0.0022330693900585175
+Target cell out:  -0.15027637779712677 Target cell target:  -1.0
+Non-target cell out:  -0.17940939962863922 Non-target cell target:  -0.17940939962863922
+---------------------------------------------------------------------
+Episode:  44 , trajectory length:  3
+8
+Target cell out:  -0.15027637779712677 Target cell target:  -1.0
+Non-target cell out:  -0.17940939962863922 Non-target cell target:  -0.17940939962863922
+Loss:  0.0023005714174360037
+Target cell out:  -0.1502799093723297 Target cell target:  -1.0
+Non-target cell out:  -0.17940939962863922 Non-target cell target:  -0.17940939962863922
+Loss:  0.0023870826698839664
+Target cell out:  -0.15028342604637146 Target cell target:  -1.0
+Non-target cell out:  -0.17940935492515564 Non-target cell target:  -0.17940935492515564
+---------------------------------------------------------------------
+Episode:  45 , trajectory length:  2
+8
+Target cell out:  -0.15028342604637146 Target cell target:  -1.0
+Non-target cell out:  -0.17940935492515564 Non-target cell target:  -0.17940935492515564
+Loss:  0.0024867216125130653
+Target cell out:  -0.1502869576215744 Target cell target:  -1.0
+Non-target cell out:  -0.17940935492515564 Non-target cell target:  -0.17940935492515564
+Loss:  0.002635128563269973
+Target cell out:  -0.15029045939445496 Target cell target:  -1.0
+Non-target cell out:  -0.17940931022167206 Non-target cell target:  -0.17940931022167206
+---------------------------------------------------------------------
+Episode:  46 , trajectory length:  2
+8
+Target cell out:  -0.15029045939445496 Target cell target:  -1.0
+Non-target cell out:  -0.17940931022167206 Non-target cell target:  -0.17940931022167206
+Loss:  0.0027786176651716232
+Target cell out:  -0.1502939909696579 Target cell target:  -1.0
+Non-target cell out:  -0.17940931022167206 Non-target cell target:  -0.17940931022167206
+Loss:  0.0029641438741236925
+Target cell out:  -0.15029747784137726 Target cell target:  -1.0
+Non-target cell out:  -0.17940925061702728 Non-target cell target:  -0.17940925061702728
+---------------------------------------------------------------------
+Episode:  47 , trajectory length:  3
+8
+Target cell out:  -0.15030375123023987 Target cell target:  -1.0
+Non-target cell out:  -0.17616456747055054 Non-target cell target:  -0.17616456747055054
+Loss:  0.003204348962754011
+Target cell out:  -0.15030886232852936 Target cell target:  -1.0
+Non-target cell out:  -0.17616456747055054 Non-target cell target:  -0.17616456747055054
+Loss:  0.0035140831023454666
+Target cell out:  -0.15031392872333527 Target cell target:  -1.0
+Non-target cell out:  -0.17616452276706696 Non-target cell target:  -0.17616452276706696
+---------------------------------------------------------------------
+Episode:  48 , trajectory length:  3
+8
+Target cell out:  -0.15031392872333527 Target cell target:  -1.0
+Non-target cell out:  -0.17616452276706696 Non-target cell target:  -0.17616452276706696
+Loss:  0.00390746770426631
+Target cell out:  -0.15031951665878296 Target cell target:  -1.0
+Non-target cell out:  -0.17616452276706696 Non-target cell target:  -0.17616452276706696
+Loss:  0.004494511056691408
+Target cell out:  -0.15032505989074707 Target cell target:  -1.0
+Non-target cell out:  -0.176164448261261 Non-target cell target:  -0.176164448261261
+---------------------------------------------------------------------
+Episode:  49 , trajectory length:  2
+8
+Target cell out:  -0.15032505989074707 Target cell target:  -1.0
+Non-target cell out:  -0.176164448261261 Non-target cell target:  -0.176164448261261
+Loss:  0.005384143907576799
+Target cell out:  -0.15033145248889923 Target cell target:  -1.0
+Non-target cell out:  -0.176164448261261 Non-target cell target:  -0.176164448261261
+Loss:  0.007175549864768982
+Target cell out:  -0.15033774077892303 Target cell target:  -1.0
+Non-target cell out:  -0.17616432905197144 Non-target cell target:  -0.17616432905197144
+---------------------------------------------------------------------
+Episode:  50 , trajectory length:  2
+8
+Target cell out:  -0.15033774077892303 Target cell target:  -1.0
+Non-target cell out:  -0.17616432905197144 Non-target cell target:  -0.17616432905197144
+Loss:  0.0100087970495224
+Target cell out:  -0.15034586191177368 Target cell target:  -1.0
+Non-target cell out:  -0.17616432905197144 Non-target cell target:  -0.17616432905197144
+Loss:  0.021235108375549316
+Target cell out:  -0.15035375952720642 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+---------------------------------------------------------------------
+Episode:  51 , trajectory length:  7
+8
+Target cell out:  -0.15035375952720642 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.001960344612598419
+Target cell out:  -0.15035729110240936 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.0019603194668889046
+Target cell out:  -0.1503608226776123 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+---------------------------------------------------------------------
+Episode:  52 , trajectory length:  2
+8
+Target cell out:  -0.1503608226776123 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.0019602952525019646
+Target cell out:  -0.15036435425281525 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.0019602698739618063
+Target cell out:  -0.1503678858280182 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+---------------------------------------------------------------------
+Episode:  53 , trajectory length:  2
+8
+Target cell out:  -0.1503678858280182 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.0019602461252361536
+Target cell out:  -0.15037141740322113 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.001960220979526639
+Target cell out:  -0.15037494897842407 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+---------------------------------------------------------------------
+Episode:  54 , trajectory length:  3
+8
+Target cell out:  -0.15037494897842407 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.0019997351337224245
+Target cell out:  -0.15037848055362701 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.001999718602746725
+Target cell out:  -0.15038201212882996 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+---------------------------------------------------------------------
+Episode:  55 , trajectory length:  2
+8
+Target cell out:  -0.15038201212882996 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.001999701838940382
+Target cell out:  -0.1503855437040329 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.0019996853079646826
+Target cell out:  -0.15038907527923584 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+---------------------------------------------------------------------
+Episode:  56 , trajectory length:  2
+8
+Target cell out:  -0.15038907527923584 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.001999668776988983
+Target cell out:  -0.15039260685443878 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+Loss:  0.00199965201318264
+Target cell out:  -0.15039613842964172 Target cell target:  -1.0
+Non-target cell out:  -0.17616403102874756 Non-target cell target:  -0.17616403102874756
+---------------------------------------------------------------------
+Episode:  57 , trajectory length:  2
+8
+Target cell out:  -0.3696920871734619 Target cell target:  -1.0
+Non-target cell out:  -0.25613898038864136 Non-target cell target:  -0.25613898038864136
+Loss:  98223248.0
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  58 , trajectory length:  4
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  59 , trajectory length:  4
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  60 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  61 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  62 , trajectory length:  4
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  63 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  64 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  65 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  66 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  67 , trajectory length:  4
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  68 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  69 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  70 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  71 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  72 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  73 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  74 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  75 , trajectory length:  4
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  76 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  77 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  78 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  79 , trajectory length:  4
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  80 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  81 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  82 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  83 , trajectory length:  7
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  84 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  85 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  86 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  87 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  88 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  89 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  90 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  91 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  92 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  93 , trajectory length:  3
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  94 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  95 , trajectory length:  5
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  96 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  97 , trajectory length:  4
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  98 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Episode:  99 , trajectory length:  2
+8
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+Loss:  nan
+Target cell out:  nan Target cell target:  nan
+Non-target cell out:  nan Non-target cell target:  nan
+---------------------------------------------------------------------
+Saving the model after 100 episodes
+Episode:  100 , trajectory length:  2
+8.990757942199707
