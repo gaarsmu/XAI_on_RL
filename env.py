@@ -42,6 +42,11 @@ class TicTacToeEnv():
             self.done = True
             self.freeze = True
             self.fpt = not self.fpt
+            if self.render:
+                self.canv.create_oval(x * 25 + 1, y * 25 + 1,
+                            x * 25 + 24, y * 25 + 24,
+                            width=2, outline='red', fill='red')
+                self.window.update()
             return self.board, -1, self.done, None
 
         val = 1 if self.fpt else -1

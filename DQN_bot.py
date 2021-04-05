@@ -16,6 +16,7 @@ class DQN_bot():
             if save_path is not None:
                 self.net.load_state_dict(torch.load(save_path))
             self.net.to(self.device)
+        self.net.eval()
 
     def evaluate_board(self,board):
         inpt = torch.from_numpy(board).to(torch.float)        

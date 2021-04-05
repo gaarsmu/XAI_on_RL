@@ -31,7 +31,7 @@ def mouseClick(event):
 class GameHost():
 
     def __init__(self, p1, p2, env, view_range = 1):
-        self.fp_turn = False
+        self.fp_turn = True
         self.p1 = p1
         self.p2 = p2
         self.freeze = True
