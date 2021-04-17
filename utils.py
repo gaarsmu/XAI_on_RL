@@ -19,8 +19,6 @@ def check_victory(board, coords, val):
                            x_coords[ends[1]], y_coords[ends[1]])
     return False, (None, None, None, None)
 
-
-
 def check_vector(vector, val):
     if (vector==val).sum()<5:
         return False, (None, None)

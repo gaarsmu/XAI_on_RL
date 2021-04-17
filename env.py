@@ -26,13 +26,6 @@ class TicTacToeEnv():
             self.window.update()
         self.fpt = True
         self.turns_count = 0
-        #self.board[self.size//2,self.size//2] = 1
-        #if self.render:
-        #    self.putfig(self.size//2,self.size//2)
-        #    self.window.update()
-        #self.turns_count = 1
-        #self.fpt = False #first player turn
-            
     
     def step(self, action):
         x,y = action
@@ -95,5 +88,26 @@ class TicTacToeEnv():
                             x * 25 + 24, y * 25 + 24,
                             width=2, outline='white', fill='white')
         self.window.update()
+
+    def getBoardHash(self):
+        return ''.join([str(x) for x in self.board.reshape(-1,) +1])
+
+    def getPBoard(self):
+        return self.board if self.fpt else (-1)*self.board
+
+    def getValidMoves(self):
+        return np.transpose(np.nonzero(self.board == 0))
+
+    def copy_env(self):
+        new_env = TicTacToeEnv()
+
+        new_env.size = self.size
+        new_env.board = self.board.copy()
+
+        new_env.done = self.done
+        new_env.freeze = self.freeze
+        new_env.fpt = self.fpt
+        new_env.turns_count = self.turns_count
+        return new_env   
 
 
