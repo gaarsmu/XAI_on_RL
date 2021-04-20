@@ -36,3 +36,16 @@ def check_vector(vector, val):
         if count == 5:
             return True, (start, i)
     return False, (None, None)
+
+def getBoardSims(board, probs):
+    samples = [(board.copy(), probs.reshape(1,-1))]
+
+    probs_loc = np.flip(probs.reshape(19,19), axis=0 ).reshape(1,-1)
+    samples.append( (np.flip(board, axis=0).copy(), probs_loc) )
+
+    probs_loc = np.flip(probs.reshape(19,19), axis=1 ).reshape(1,-1)
+    samples.append( (np.flip(board, axis=1).copy(), probs_loc) )
+
+    probs_loc = np.flip(probs.reshape(19,19), axis=[0,1] ).reshape(1,-1)
+    samples.append( (np.flip(board, axis=[0,1]).copy(), probs_loc) )
+    return samples
