@@ -16,9 +16,10 @@ class MCTS():
 
     def getProbs(self, env, temp=1):
 
-        for _ in range(self.args['num_sims']):
+        for j in range(self.args['num_sims']):
             env_copy = env.copy_env()
-            self.treeSearch(env_copy)
+            assert (env_copy.board == env.board).all()
+            v=self.treeSearch(env_copy)
         
         s = env.getBoardHash()
         counts = [ self.Nsa[(s,a)] if (s,a) in self.Nsa else 0 for a in range(env.size*env.size) ]
@@ -32,7 +33,7 @@ class MCTS():
         else:
             counts_sum = float(sum(counts))
             probs = [x/counts_sum for x in counts]
-            return probs
+            return np.array(probs)
 
 
     def treeSearch(self, env):
@@ -57,7 +58,11 @@ class MCTS():
             cur_best = -float('inf')
             best_act = -1
             valid_moves = env.getValidMoves()
-            for a in valid_moves:
+            check_valids = [np.abs(env.board[x[0],x[1]]) for x in valid_moves]
+            if np.sum(check_valids) >0:
+                print('Something wrong')
+                assert 1==0
+            for a in valid_moves.reshape(-1,2):
                 an = env.size*a[0] + a[1]
                 if (s,an) in self.Qsa:
                     u = self.Qsa[(s,an)] +\
@@ -68,8 +73,13 @@ class MCTS():
                     cur_best = u
                     best_act = a
             
-            a = best_act
-            an = env.size*a[0] + a[1]
+            try: 
+                a = best_act
+                an = env.size*a[0] + a[1]
+            except BaseException as e:
+                print(a)
+                print(valid_moves)
+                raise(e)
             _, done, reward, _ = env.step((a[0], a[1]))
             if done:
                 v = reward
