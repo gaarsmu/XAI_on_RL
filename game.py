@@ -4,7 +4,8 @@ from env import TicTacToeEnv
 import tkinter as tk
 from time import sleep
 from calcbot import CalcBot
-from DQN_bot import DQN_bot
+from AlphaBot import AlphaBot
+#from DQN_bot import DQN_bot
 
 
 def mouseClick(event):
@@ -19,7 +20,7 @@ def mouseClick(event):
             host.turn(x, y)
 
             if host.game_type == 'hc' and not host.game_over:
-                x, y = host.p2.get_action(host.env.board, host.info_dict)
+                x, y = host.p2.get_action(host.env, host.info_dict)
                 host.turn(x, y)
                 host.freeze = False
         else:
@@ -64,9 +65,9 @@ class GameHost():
         elif self.game_type == 'cc':
             while not self.game_over:
                 if self.fp_turn:
-                    x, y = self.p1.get_action(self.env.board, self.info_dict)
+                    x, y = self.p1.get_action(self.env, self.info_dict)
                 else:
-                    x, y = self.p2.get_action(-1*self.env.board, self.info_dict)
+                    x, y = self.p2.get_action(self.env, self.info_dict)
                 
                 self.turn(x, y)
 
@@ -111,8 +112,13 @@ class RandomBot():
 if __name__ == '__main__':
     env = TicTacToeEnv(render=True)
 
-    player1 = HumanPlayer()#CalcBot(2, 1)#
-    player2 = DQN_bot(device='cuda:0', save_path='DQN_net.pth')#HumanPlayer()#CalcBot(3, 2)
+    player1 = HumanPlayer()
+    #AlphaBot('AlphaZero/models/net_updates_753.pth',
+    # {'c' : 1., 'num_sims': 25})#CalcBot(2, 1)#HumanPlayer()
+    #AlphaBot('AlphaZero/models/net_updates_24.pth', {'c' : 1., 'num_sims': 25})
+    player2 = AlphaBot('AlphaZero/models/net_updates_753.pth',
+     {'c' : 1., 'num_sims': 25})
+     #CalcBot(3, 2)#HumanPlayer()#
     host = GameHost(player1, player2, env)
     host.start_game()
     env.window.mainloop()
