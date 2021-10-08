@@ -1,3 +1,7 @@
+import os
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"   # see issue #152
+os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+
 from env import TicTacToeEnv
 from utils import *
 from AlphaZero.AlphaNet import AlphaNet
@@ -7,12 +11,12 @@ import torch
 
 if __name__ == '__main__':
     net = AlphaNet(11, device='cuda:0')
-    net.load_net('AlphaZero/models/net_updates_7.pth')
-    args = {'c' : 1., 'num_sims': 25}
+    net.load_net('AlphaZero/models/net_updates_1000.pth')
+    args = {'c' : 1., 'num_sims': 25, 'sleep_time': 0}
     mcts = MCTS(net, args)
-    coach = Trainer(net, args, num_eps = 100)
+    coach = Trainer(net, args, num_eps=100)
 
-    for num_update in range(8, 9):
+    for num_update in range(1001, 1501):
         print('Starting update {}'.format(num_update))
         coach.execute_update(net, args)
 
@@ -30,12 +34,11 @@ if __name__ == '__main__':
         print('New agent draws {}'.format(num_of_draws))
         print('New agent losses {}'.format(num_of_losses))
 
-        
-
         des_result = np.array([(-1)**i * results[i] for i in range(len(results))])
         if des_result.sum() < 1:
             print('Update worse than 1, keeping previous version')
             net_old.save_net('AlphaZero/models/net_updates_'+str(num_update)+'.pth')
+            net.load_net('AlphaZero/models/net_updates_'+str(num_update)+'.pth')
         else:
             net.save_net('AlphaZero/models/net_updates_'+str(num_update)+'.pth')
 

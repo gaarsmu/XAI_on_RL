@@ -1,3 +1,7 @@
+import os
+os.environ["CUDA_DEVICE_ORDER"]="PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"]="0"
+
 import numpy as np
 from utils import *
 from env import TicTacToeEnv
@@ -65,8 +69,10 @@ class GameHost():
         elif self.game_type == 'cc':
             while not self.game_over:
                 if self.fp_turn:
+                    print('Back move')
                     x, y = self.p1.get_action(self.env, self.info_dict)
                 else:
+                    print('White move')
                     x, y = self.p2.get_action(self.env, self.info_dict)
                 
                 self.turn(x, y)
@@ -112,13 +118,12 @@ class RandomBot():
 if __name__ == '__main__':
     env = TicTacToeEnv(render=True)
 
-    player1 = HumanPlayer()
-    #AlphaBot('AlphaZero/models/net_updates_753.pth',
-    # {'c' : 1., 'num_sims': 25})#CalcBot(2, 1)#HumanPlayer()
-    #AlphaBot('AlphaZero/models/net_updates_24.pth', {'c' : 1., 'num_sims': 25})
-    player2 = AlphaBot('AlphaZero/models/net_updates_753.pth',
-     {'c' : 1., 'num_sims': 25})
-     #CalcBot(3, 2)#HumanPlayer()#
+    player1 = HumanPlayer()#AlphaBot('AlphaZero/models/net_updates_913.pth',{'c' : 1., 'num_sims': 25, 'sleep_time': 0.15})
+    #
+
+    player2 = AlphaBot('AlphaZero/models/net_updates_1500.pth',
+     {'c' : 1., 'num_sims': 25, 'sleep_time': 0.15})
+     #CalcBot(3, 2)#
     host = GameHost(player1, player2, env)
     host.start_game()
     env.window.mainloop()

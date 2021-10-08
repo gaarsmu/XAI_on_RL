@@ -24,19 +24,23 @@ class TicTacToeEnv():
                                   tag="rect",
                                   fill="burlywood", outline="black")
             self.window.update()
+            self.vis_objects = []
+            self.end_obj= None
         self.fpt = True
         self.turns_count = 0
+        self.moves_log = []
     
     def step(self, action):
         x,y = action
         self.turns_count += 1
+        self.moves_log.append(action)
         #repeated move case
         if self.board[x,y] != 0:
             self.done = True
             self.freeze = True
             self.fpt = not self.fpt
             if self.render:
-                self.canv.create_oval(x * 25 + 1, y * 25 + 1,
+                self.end_obj = self.canv.create_oval(x * 25 + 1, y * 25 + 1,
                             x * 25 + 24, y * 25 + 24,
                             width=2, outline='red', fill='red')
                 self.window.update()
@@ -53,7 +57,7 @@ class TicTacToeEnv():
         done, positions = self.check_victory(x,y,val)
         self.done = done
         if done and self.render:
-            self.canv.create_line(positions[0] * 25 + 13, positions[1] * 25 + 13,
+            self.end_obj = self.canv.create_line(positions[0] * 25 + 13, positions[1] * 25 + 13,
                          positions[2] * 25 + 13, positions[3] * 25 + 13,
                          width=4, fill='red')
             self.window.update()
@@ -68,11 +72,26 @@ class TicTacToeEnv():
         #Full board_case
         if self.turns_count == self.size*self.size:
             self.freeze = True
-            done = True
-            self.done = done
+            self.done = True
 
         return self.board, reward, self.done, None
 
+    def step_back(self):
+        if self.turns_count > 0:
+            x, y = self.moves_log[-1]
+            self.moves_log = self.moves_log[:-1]
+            self.turns_count -= 1
+            self.board[x,y] = 0
+            self.fpt = not self.fpt
+            self.done = False
+            self.freeze = False
+            if self.render:
+                self.canv.delete(self.vis_objects[-1])
+                self.vis_objects = self.vis_objects[:-1]
+                if self.end_obj is not None:
+                    self.canv.delete(self.end_obj)
+                    self.end_obj = None
+                self.window.update()
 
     def check_victory(self, x,y, val):
         finish, positions = check_victory(self.board, (x,y), val)
@@ -80,13 +99,14 @@ class TicTacToeEnv():
 
     def putfig(self,x, y):
         if self.fpt:
-            self.canv.create_oval(x * 25 + 1, y * 25 + 1,
+            ov = self.canv.create_oval(x * 25 + 1, y * 25 + 1,
                             x * 25 + 24, y * 25 + 24,
                             width=2, outline='black', fill='black')
         else:
-            self.canv.create_oval(x * 25 + 1, y * 25 + 1,
+            ov = self.canv.create_oval(x * 25 + 1, y * 25 + 1,
                             x * 25 + 24, y * 25 + 24,
                             width=2, outline='white', fill='white')
+        self.vis_objects.append(ov)
         self.window.update()
 
     def getBoardHash(self):

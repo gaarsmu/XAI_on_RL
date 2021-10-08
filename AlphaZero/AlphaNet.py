@@ -16,7 +16,7 @@ class ConvBlock(nn.Module):
 
 class AlphaNet(nn.Module):
 
-    def __init__(self, depth, board_size=19, device='cpu', lr = 0.001):
+    def __init__(self, depth, board_size=19, device='cpu', lr=5e-4):
         super(AlphaNet, self).__init__()
         self.depth = depth
         self.first_conv = ConvBlock(1,64)
@@ -76,7 +76,8 @@ class AlphaNet(nn.Module):
             probs, v = self.forward(inpt)
             return probs.detach().cpu().numpy(), v.item()
 
-    def updateNet(self, data, epochs = 10, batch_size=64):
+    def updateNet(self, data, epochs=10, batch_size=64):
+        self.optimizer = torch.optim.Adam(self.parameters(), lr=self.lr)
         for _ in range(epochs):
             indexes = list(np.random.permutation(range(len(data))))
             for i in range(0, len(data), batch_size):
@@ -98,6 +99,7 @@ class AlphaNet(nn.Module):
                 policy_out, values_out = self.forward(boards)
                 loss1 = self.policy_loss(probs, policy_out)
                 loss2 = self.value_loss(values, values_out)
+                #print(loss1, loss2)
                 loss = loss1 + loss2
                 loss.backward()
                 self.optimizer.step()
@@ -111,11 +113,12 @@ class AlphaNet(nn.Module):
 
 
 def cross_entropy(target, output):
-    return torch.mean(-target*torch.log(output))
+    return torch.mean(torch.sum(-target*torch.log(output+1e-4), dim=1))
+
 
 if __name__ == '__main__':
     tensor = torch.randn(1,1,19,19)
-    net = AlphaNet(8)
+    net = AlphaNet(11)
     net.eval()
     policy_output, value_output = net(tensor)
     print(value_output)

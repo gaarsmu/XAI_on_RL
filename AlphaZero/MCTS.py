@@ -1,5 +1,6 @@
 import numpy as np
 from utils import *
+import time
 
 class MCTS():
 
@@ -16,10 +17,13 @@ class MCTS():
 
     def getProbs(self, env, temp=1):
 
+        values = []
         for j in range(self.args['num_sims']):
-            env_copy = env.copy_env()
-            assert (env_copy.board == env.board).all()
-            v=self.treeSearch(env_copy)
+            #env_copy = env.copy_env()
+            #assert (env_copy.board == env.board).all()
+            v=self.treeSearch(env)
+            values.append(v)
+        #print(values)
         
         s = env.getBoardHash()
         counts = [ self.Nsa[(s,a)] if (s,a) in self.Nsa else 0 for a in range(env.size*env.size) ]
@@ -38,10 +42,11 @@ class MCTS():
 
     def treeSearch(self, env):
         
-        s =  env.getBoardHash()
+        s = env.getBoardHash()
 
         #leaf node case
         if s not in self.Ps:
+            time.sleep(self.args['sleep_time'])
             probs, v = self.net.predict(env.getPBoard())
 
             self.Ps[s] = probs * (env.board == 0).reshape(1, -1)
@@ -58,13 +63,11 @@ class MCTS():
             cur_best = -float('inf')
             best_act = -1
             valid_moves = env.getValidMoves()
-            check_valids = [np.abs(env.board[x[0],x[1]]) for x in valid_moves]
-            if np.sum(check_valids) >0:
-                print('Something wrong')
-                assert 1==0
-            for a in valid_moves.reshape(-1,2):
+            #check_valids = [np.abs(env.board[x[0],x[1]]) for x in valid_moves]
+
+            for a in valid_moves.reshape(-1, 2):
                 an = env.size*a[0] + a[1]
-                if (s,an) in self.Qsa:
+                if (s, an) in self.Qsa:
                     u = self.Qsa[(s,an)] +\
                         self.args['c']*self.Ps[s][an]*np.sqrt(self.Ns[s])/(1+self.Nsa[(s,an)])
                 else:
@@ -72,20 +75,22 @@ class MCTS():
                 if u > cur_best:
                     cur_best = u
                     best_act = a
-            
-            try: 
-                a = best_act
-                an = env.size*a[0] + a[1]
-            except BaseException as e:
-                print(a)
-                print(valid_moves)
-                raise(e)
+
+            #try:
+            a = best_act
+            an = env.size*a[0] + a[1]
+            #except BaseException as e:
+            #    print(a)
+            #    print(valid_moves)
+            #    raise e
             _, done, reward, _ = env.step((a[0], a[1]))
+
             if done:
                 v = reward
+                time.sleep(self.args['sleep_time'])
             else:
                 v = self.treeSearch(env)
-
+            env.step_back()
             if (s,an) in self.Qsa:
                 self.Qsa[(s,an)] = (self.Nsa[(s,an)]*self.Qsa[(s,an)]+v)/(self.Nsa[(s,an)]+1)
                 self.Nsa[(s,an)] += 1
