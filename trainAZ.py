@@ -1,6 +1,6 @@
 import os
-os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"   # see issue #152
-os.environ["CUDA_VISIBLE_DEVICES"] = "0"
+os.environ["CUDA_DEVICE_ORDER"] = "PCI_BUS_ID"
+os.environ["CUDA_VISIBLE_DEVICES"] = "2"
 
 from env import TicTacToeEnv
 from utils import *
@@ -11,12 +11,12 @@ import torch
 
 if __name__ == '__main__':
     net = AlphaNet(11, device='cuda:0')
-    net.load_net('AlphaZero/models/net_updates_1000.pth')
-    args = {'c' : 1., 'num_sims': 25, 'sleep_time': 0}
+    net.load_net('AlphaZero/models/net_updates_1.pth')
+    args = {'c': 1., 'num_sims': 25, 'sleep_time': 0}
     mcts = MCTS(net, args)
     coach = Trainer(net, args, num_eps=100)
 
-    for num_update in range(1001, 1501):
+    for num_update in range(501, 1001):
         print('Starting update {}'.format(num_update))
         coach.execute_update(net, args)
 

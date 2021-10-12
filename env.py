@@ -29,13 +29,26 @@ class TicTacToeEnv():
         self.fpt = True
         self.turns_count = 0
         self.moves_log = []
+        self.borders_log = []
     
     def step(self, action):
-        x,y = action
-        self.turns_count += 1
+        x, y = action
         self.moves_log.append(action)
+        #Update borders
+        x_min = max(x-1, 0)
+        x_max = min(x+2, 19)
+        y_min = max(y-1, 0)
+        y_max = min(y+2, 19)
+
+        if self.turns_count == 0:
+            self.borders_log.append((x_min, x_max, y_min, y_max))
+        else:
+            x1, x2, y1, y2 = self.borders_log[-1]
+            self.borders_log.append((min(x_min, x1), max(x_max, x2), min(y_min, y1), max(y_max, y2)))
+        self.turns_count += 1
+
         #repeated move case
-        if self.board[x,y] != 0:
+        if self.board[x, y] != 0:
             self.done = True
             self.freeze = True
             self.fpt = not self.fpt
@@ -80,6 +93,7 @@ class TicTacToeEnv():
         if self.turns_count > 0:
             x, y = self.moves_log[-1]
             self.moves_log = self.moves_log[:-1]
+            self.borders_log = self.borders_log[:-1]
             self.turns_count -= 1
             self.board[x,y] = 0
             self.fpt = not self.fpt
@@ -116,7 +130,13 @@ class TicTacToeEnv():
         return self.board if self.fpt else (-1)*self.board
 
     def getValidMoves(self):
-        return np.transpose(np.nonzero(self.board == 0))
+        if self.turns_count == 0:
+            return np.array([[9, 9]])
+        else:
+            x1, x2, y1, y2 = self.borders_log[-1]
+            result = np.transpose(np.nonzero(self.board[x1:x2, y1:y2] == 0))
+            result = result + np.array([[x1, y1]])
+            return result #np.transpose()
 
     def copy_env(self):
         new_env = TicTacToeEnv()

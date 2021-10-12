@@ -18,13 +18,15 @@ def mouseClick(event):
 
         x, y = int(event.x) // 25, int(event.y) // 25
         if 0 <= x <= env.size-1 and 0 <= y <= env.size-1:
-            #print('clicked on ', x, ' ', y)
-            if host.game_type == 'hc':
+            if host.game_type == 'hc' or host.game_type == 'ch':
                 host.freeze = True
             host.turn(x, y)
 
-            if host.game_type == 'hc' and not host.game_over:
-                x, y = host.p2.get_action(host.env, host.info_dict)
+            if (host.game_type == 'hc' or host.game_type == 'ch') and not host.game_over:
+                if host.game_type == 'hc':
+                    x, y = host.p2.get_action(host.env, host.info_dict)
+                else:
+                    x, y = host.p1.get_action(host.env, host.info_dict)
                 host.turn(x, y)
                 host.freeze = False
         else:
@@ -59,6 +61,12 @@ class GameHost():
             self.env.canv.tag_bind('rect', '<Button-1>', mouseClick)
         elif self.p1.type == 'computer' and self.p2.type == 'computer':
             self.game_type = 'cc'
+        elif self.p1.type == 'computer' and self.p2.type == 'human':
+            self.game_type = 'ch'
+            x, y = self.p1.get_action(self.env, self.info_dict)
+            self.turn(x, y)
+            self.freeze = False
+            self.env.canv.tag_bind('rect', '<Button-1>', mouseClick)
 
         if self.game_type == 'hh':
             self.freeze = False
@@ -118,12 +126,11 @@ class RandomBot():
 if __name__ == '__main__':
     env = TicTacToeEnv(render=True)
 
-    player1 = HumanPlayer()#AlphaBot('AlphaZero/models/net_updates_913.pth',{'c' : 1., 'num_sims': 25, 'sleep_time': 0.15})
-    #
+    player1 = AlphaBot('AlphaZero/models/net_updates_866.pth',{'c' : 1., 'num_sims': 25, 'sleep_time': 0.15})
+    #HumanPlayer()#
 
-    player2 = AlphaBot('AlphaZero/models/net_updates_1500.pth',
-     {'c' : 1., 'num_sims': 25, 'sleep_time': 0.15})
-     #CalcBot(3, 2)#
+    player2 = HumanPlayer()#AlphaBot('AlphaZero/models/net_updates_859.pth', {'c': 1., 'num_sims': 25, 'sleep_time': 0.15})
+     #
     host = GameHost(player1, player2, env)
     host.start_game()
     env.window.mainloop()
