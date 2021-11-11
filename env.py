@@ -4,13 +4,14 @@ import tkinter as tk
 
 class TicTacToeEnv():
 
-    def __init__(self, render = False, size = 19):
+    def __init__(self, render=False, size=19, gap=2):
         self.size = size
-        self.board = np.zeros((size,size), dtype=np.int16)
+        self.board = np.zeros((size, size), dtype=np.int16)
 
         self.done = False
         self.freeze = False
         self.render = render
+        self.g = gap
         if self.render:
             self.window = tk.Tk()
             self.canv = tk.Canvas(self.window, width=self.size*25, height=self.size*25)
@@ -35,10 +36,10 @@ class TicTacToeEnv():
         x, y = action
         self.moves_log.append(action)
         #Update borders
-        x_min = max(x-1, 0)
-        x_max = min(x+2, 19)
-        y_min = max(y-1, 0)
-        y_max = min(y+2, 19)
+        x_min = max(x-self.g, 0)
+        x_max = min(x+self.g+1, 19)
+        y_min = max(y-self.g, 0)
+        y_max = min(y+self.g+1, 19)
 
         if self.turns_count == 0:
             self.borders_log.append((x_min, x_max, y_min, y_max))
@@ -124,19 +125,24 @@ class TicTacToeEnv():
         self.window.update()
 
     def getBoardHash(self):
-        return ''.join([str(x) for x in self.board.reshape(-1,) +1])
+        return ''.join([str(x) for x in self.board.reshape(-1,) + 1])
 
     def getPBoard(self):
         return self.board if self.fpt else (-1)*self.board
 
     def getValidMoves(self):
         if self.turns_count == 0:
-            return np.array([[9, 9]])
+            if np.random.random() < 0.5:
+                return np.array([[9, 9]])
+            else:
+                x = np.random.choice(range(7, 12))
+                y = np.random.choice(range(7, 12))
+                return np.array([[x, y]])
         else:
             x1, x2, y1, y2 = self.borders_log[-1]
             result = np.transpose(np.nonzero(self.board[x1:x2, y1:y2] == 0))
             result = result + np.array([[x1, y1]])
-            return result #np.transpose()
+            return result
 
     def copy_env(self):
         new_env = TicTacToeEnv()

@@ -11,12 +11,12 @@ import torch
 
 if __name__ == '__main__':
     net = AlphaNet(11, device='cuda:0')
-    net.load_net('AlphaZero/models/net_updates_1.pth')
+    net.load_net('AlphaZero/models/net_updates_2000.pth')
     args = {'c': 1., 'num_sims': 25, 'sleep_time': 0}
     mcts = MCTS(net, args)
     coach = Trainer(net, args, num_eps=100)
 
-    for num_update in range(501, 1001):
+    for num_update in range(2001, 3001):
         print('Starting update {}'.format(num_update))
         coach.execute_update(net, args)
 
